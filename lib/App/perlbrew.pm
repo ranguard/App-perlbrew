@@ -195,7 +195,7 @@ sub uniq(@) {
         if (! @command) {
             my @commands = (
                 # curl's --fail option makes the exit code meaningful
-                [qw( curl --silent --location --fail )],
+                [qw( curl --insecure --silent --location --fail )],
                 [qw( wget --no-check-certificate --quiet -O - )],
             );
             for my $command (@commands) {
